@@ -1,1 +1,23 @@
-<p>login works!</p>
+<div class="container">
+  <h2>Login</h2>
+  
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div *ngIf="error" class="error-message">
+      {{error}}
+    </div>
+
+    <div>
+      <label for="username">Username</label>
+      <input type="text" id="username" formControlName="username">
+    </div>
+
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" formControlName="password">
+    </div>
+
+    <button type="submit" [disabled]="!loginForm.valid">Login</button>
+  </form>
+
+  <p>Don't have an account? <a routerLink="/signup">Sign Up</a></p>
+</div>

@@ -1,14 +1,13 @@
+import { Department } from './department';
+
 export interface Employee {
   id?: number;
   first_name: string;
   last_name: string;
   email: string;
-  department: number;
+  department: number | Department;
   hire_date: string;
   status: boolean;
-}
-
-export interface Department {
-  id?: number;
-  name: string;
+  created_at?: string;
+  updated_at?: string;
 }
