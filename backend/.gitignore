@@ -46,4 +46,3 @@ static/
 *.sql
 
 django-admin-access.png
-settings.py
